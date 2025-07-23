@@ -3,7 +3,7 @@
 
 import { useState, FC, ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Briefcase, GraduationCap, Award, Calendar, BarChart2, Users, Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Calendar, BarChart2, Users, Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
 
