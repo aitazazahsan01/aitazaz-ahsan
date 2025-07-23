@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Code, Palette, Rocket, Database, MessageCircle, Users, Wrench, GitMerge } from 'lucide-react';
 
 // Data for the skills section
@@ -34,7 +34,7 @@ const tabs = Object.keys(skillsData);
 export default function SkillsSection() {
     const [activeTab, setActiveTab] = useState(tabs[0]);
 
-    const contentVariants = {
+    const contentVariants : Variants = {
         hidden: { opacity: 0, y: 20 },
         visible: { 
             opacity: 1, 
