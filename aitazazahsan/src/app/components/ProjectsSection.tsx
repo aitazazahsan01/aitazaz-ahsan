@@ -1,7 +1,7 @@
 // app/components/ProjectsSection.tsx
 "use client";
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { Github } from 'lucide-react';
 import Image from 'next/image';
 
@@ -51,7 +51,7 @@ const projects = [
     }
 ];
 
-const cardVariants = {
+const cardVariants : Variants= {
     hidden: { opacity: 0, scale: 0.9 },
     visible: {
         opacity: 1,
