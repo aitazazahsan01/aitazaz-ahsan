@@ -28,7 +28,7 @@ export default function AboutSection() {
             <a href="https://www.linkedin.com/in/muhammad-aitazaz-ahsan-4b2480353" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><Linkedin size={28}/></a>
             <a href="https://github.com/aitazazahsan01" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><Github size={28}/></a>
           </div>
-          <a href="/My_CV.pdf" download
+          <a href="/MY_CV.pdf" download
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:scale-105 transform transition-transform duration-300"
           >
             <Download size={20}/>
