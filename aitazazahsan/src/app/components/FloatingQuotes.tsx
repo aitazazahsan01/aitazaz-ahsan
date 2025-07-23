@@ -2,7 +2,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 const quotes = [
   "Turning coffee into code since 2020.",
@@ -38,10 +38,10 @@ export default function FloatingQuotes() {
     };
   }, []);
 
-  const quoteVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } },
-  };
+  const quoteVariants: Variants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+};
 
   return (
     <div className="fixed top-0 left-0 w-full h-full z-20 pointer-events-none">
