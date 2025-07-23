@@ -2,7 +2,7 @@
 "use client";
 
 import { useState, FC, ReactNode } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence , Variants} from 'framer-motion';
 import { Calendar, BarChart2, Users, Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
@@ -74,7 +74,7 @@ export default function ExperienceSection() {
     const [direction, setDirection] = useState(0);
     const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
-    const variants = {
+    const variants : Variants = {
         enter: (direction: number) => ({
             x: direction > 0 ? 1000 : -1000,
             opacity: 0
