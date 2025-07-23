@@ -1,6 +1,4 @@
 // app/page.tsx
-// This is the main page file. It imports and orchestrates all the components.
-
 "use client";
 
 import Header from './components/Header';
@@ -11,8 +9,10 @@ import SkillsSection from './components/SkillsSection';
 import ServicesSection from './components/ServicesSection';
 import ProjectsSection from './components/ProjectsSection';
 import TestimonialsSection from './components/TestimonialsSection';
-import ContactSection from './components/ContactSection'; // Import the new section
+import ContactSection from './components/ContactSection';
 import Background from './components/Background';
+// I've added the import for LetsWorkTogetherSection as it was missing in the code you sent
+import LetsWorkTogetherSection from './components/LetsWorkTogetherSection';
 
 export default function Home() {
   return (
@@ -32,10 +32,12 @@ export default function Home() {
         }
       `}</style>
       
+      {/* --- CORRECTED LAYOUT --- */}
+      {/* Header and Background are moved outside of the main tag */}
+      <Background />
+      <Header />
+      
       <main className="relative w-full bg-[#111119] text-white font-sans overflow-x-hidden">
-        <Background />
-        <Header />
-                
         {/* The sections of your single-page application */}
         <div className="relative z-10">
           <HeroSection />
@@ -45,7 +47,9 @@ export default function Home() {
           <ServicesSection />
           <ProjectsSection />
           <TestimonialsSection />
-          <ContactSection /> {/* Add the new section here */}
+          {/* I've added the missing LetsWorkTogetherSection back in */}
+          <LetsWorkTogetherSection />
+          <ContactSection />
         </div>
       </main>
     </>
