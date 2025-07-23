@@ -1,7 +1,7 @@
 // app/components/TestimonialsSection.tsx
 "use client";
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { Star } from 'lucide-react';
 
 // Updated, personalized testimonials data
@@ -26,7 +26,7 @@ const testimonials = [
     }
 ];
 
-const cardVariants = {
+const cardVariants : Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
         opacity: 1,
