@@ -9,15 +9,13 @@ import SkillsSection from './components/SkillsSection';
 import ServicesSection from './components/ServicesSection';
 import ProjectsSection from './components/ProjectsSection';
 import TestimonialsSection from './components/TestimonialsSection';
+import LetsWorkTogetherSection from './components/LetsWorkTogetherSection';
 import ContactSection from './components/ContactSection';
 import Background from './components/Background';
-// I've added the import for LetsWorkTogetherSection as it was missing in the code you sent
-import LetsWorkTogetherSection from './components/LetsWorkTogetherSection';
 
 export default function Home() {
   return (
     <>
-      {/* Global styles for font and animated gradient */}
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
         html { scroll-behavior: smooth; }
@@ -32,13 +30,11 @@ export default function Home() {
         }
       `}</style>
       
-      {/* --- CORRECTED LAYOUT --- */}
-      {/* Header and Background are moved outside of the main tag */}
       <Background />
       <Header />
       
-      <main className="relative w-full bg-[#111119] text-white font-sans overflow-x-hidden">
-        {/* The sections of your single-page application */}
+      {/* The problematic overflow-x-hidden class has been REMOVED from this main tag */}
+      <main className="relative w-full bg-[#111119] text-white font-sans">
         <div className="relative z-10">
           <HeroSection />
           <AboutSection />
@@ -47,7 +43,6 @@ export default function Home() {
           <ServicesSection />
           <ProjectsSection />
           <TestimonialsSection />
-          {/* I've added the missing LetsWorkTogetherSection back in */}
           <LetsWorkTogetherSection />
           <ContactSection />
         </div>
