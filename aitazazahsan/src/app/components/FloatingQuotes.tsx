@@ -21,7 +21,7 @@ export default function FloatingQuotes() {
   useEffect(() => {
     const getRandomQuote = () => quotes[Math.floor(Math.random() * quotes.length)];
     const setInitialQuotes = () => {
-      let q1 = getRandomQuote();
+      const q1 = getRandomQuote();
       let q2 = getRandomQuote();
       while (q1 === q2) { q2 = getRandomQuote(); }
       setLeftQuote(q1);
