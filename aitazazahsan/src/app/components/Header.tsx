@@ -4,13 +4,11 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { Menu, X } from 'lucide-react'; // Import icons for the mobile menu
+import { Menu, X } from 'lucide-react';
 
-// Using the most complete list of nav links for your site
 const navLinks = ["About", "Experience", "Skills", "Services", "Projects", "Testimonials", "Contact"];
 
 export default function Header() {
-  // State to manage the mobile menu's visibility
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuVariants = {
@@ -39,7 +37,6 @@ export default function Header() {
             <span className="font-bold text-lg">My Profile</span>
           </div>
           
-          {/* Desktop Navigation (hidden on mobile) */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a key={link} href={`#${link.toLowerCase()}`} className="text-gray-300 hover:text-white transition-colors duration-300">
@@ -48,8 +45,7 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Mobile Menu Button (visible only on mobile) */}
-          <div className="md:hidden bg-red-500 p-4">
+          <div className="md:hidden">
             <button onClick={() => setIsMenuOpen(true)} className="text-white">
               <Menu size={28} />
             </button>
@@ -57,11 +53,11 @@ export default function Header() {
         </div>
       </motion.header>
 
-      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMenuOpen && (
+          // z-index increased to ensure it's on top of all other content
           <motion.div
-            className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex flex-col items-center justify-center"
+            className="fixed inset-0 bg-black/90 backdrop-blur-md z-[100] flex flex-col items-center justify-center"
             variants={menuVariants}
             initial="hidden"
             animate="visible"
@@ -79,7 +75,7 @@ export default function Header() {
                   key={link} 
                   href={`#${link.toLowerCase()}`} 
                   className="text-3xl font-semibold text-gray-300 hover:text-white transition-colors duration-300"
-                  onClick={() => setIsMenuOpen(false)} // Close menu on link click
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {link}
                 </a>
@@ -91,6 +87,4 @@ export default function Header() {
     </>
   );
 }
-
-
 
