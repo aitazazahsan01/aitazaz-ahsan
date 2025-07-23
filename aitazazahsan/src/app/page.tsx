@@ -13,7 +13,6 @@ import ProjectsSection from './components/ProjectsSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection'; // Import the new section
 import Background from './components/Background';
-import FloatingQuotes from './components/FloatingQuotes';
 
 export default function Home() {
   return (
@@ -36,8 +35,7 @@ export default function Home() {
       <main className="relative w-full bg-[#111119] text-white font-sans overflow-x-hidden">
         <Background />
         <Header />
-        <FloatingQuotes />
-        
+                
         {/* The sections of your single-page application */}
         <div className="relative z-10">
           <HeroSection />
