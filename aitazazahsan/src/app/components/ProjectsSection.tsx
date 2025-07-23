@@ -2,7 +2,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Github, ArrowUpRight } from 'lucide-react';
+import { Github } from 'lucide-react';
 import Image from 'next/image';
 
 // Your project data
