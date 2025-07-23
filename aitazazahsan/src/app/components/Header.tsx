@@ -49,7 +49,7 @@ export default function Header() {
           </nav>
 
           {/* Mobile Menu Button (visible only on mobile) */}
-          <div className="md:hidden">
+          <div className="md:hidden bg-red-500 p-4">
             <button onClick={() => setIsMenuOpen(true)} className="text-white">
               <Menu size={28} />
             </button>
