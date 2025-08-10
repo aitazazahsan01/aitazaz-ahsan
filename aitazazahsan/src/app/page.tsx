@@ -9,7 +9,6 @@ import SkillsSection from './components/SkillsSection';
 import ServicesSection from './components/ServicesSection';
 import ProjectsSection from './components/ProjectsSection';
 import TestimonialsSection from './components/TestimonialsSection';
-import LetsWorkTogetherSection from './components/LetsWorkTogetherSection';
 import ContactSection from './components/ContactSection';
 import Background from './components/Background';
 
@@ -43,7 +42,6 @@ export default function Home() {
           <ServicesSection />
           <ProjectsSection />
           <TestimonialsSection />
-          <LetsWorkTogetherSection />
           <ContactSection />
         </div>
       </main>

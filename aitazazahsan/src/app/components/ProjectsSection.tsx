@@ -15,11 +15,12 @@ const projects = [
         image: "/kaawish.png"
     },
     {
-        title: "Internship Projects",
-        description: "A showcase of professional projects and contributions made during my internship at Nexium.",
-        tech: ["Next.js", "TypeScript", "Tailwind"],
-        link: "https://github.com/aitazazahsan01/Nexium",
-        image: "/nexium.png"
+        // --- THIS SECTION HAS BEEN UPDATED ---
+        title: "Khuda Hafiz Website",
+        description: "Contributed to the development of the Khuda Hafiz startup website, a platform for connecting users with services.",
+        tech: ["React", "Node.js", "MongoDB", "Express"],
+        link: "https://github.com/muhiu-din/KhudaHafizWeb",
+        image: "/khudahafiz.png" // You can create a placeholder image for this
     },
     {
         title: "Weather App",
