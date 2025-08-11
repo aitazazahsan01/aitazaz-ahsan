@@ -41,11 +41,13 @@ export default function ParticleBackground() {
     }
 
             update() {
+                if (!canvas) return; // This is the fix
+            
                 this.x += this.speedX;
                 this.y += this.speedY;
-
+            
                 if (this.size > 0.2) this.size -= 0.01;
-
+            
                 if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
                 if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
             }
