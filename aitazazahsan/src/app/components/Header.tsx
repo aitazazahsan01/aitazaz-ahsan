@@ -55,7 +55,6 @@ export default function Header() {
 
       <AnimatePresence>
         {isMenuOpen && (
-          // z-index increased to ensure it's on top of all other content
           <motion.div
             className="fixed inset-0 bg-black/90 backdrop-blur-md z-[100] flex flex-col items-center justify-center"
             variants={menuVariants}
@@ -87,4 +86,3 @@ export default function Header() {
     </>
   );
 }
-
