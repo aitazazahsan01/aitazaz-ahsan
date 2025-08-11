@@ -2,7 +2,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import { motion, useAnimation, Variants  } from 'framer-motion';
 import { Mail, Linkedin, Github, Download } from 'lucide-react';
 import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
@@ -19,7 +19,7 @@ const CustomCursor = ({ isHovering }: { isHovering: boolean }) => {
         return () => window.removeEventListener('mousemove', handleMouseMove);
     }, []);
 
-    const cursorVariants = {
+    const cursorVariants : Variants = {
         default: {
             x: mousePosition.x - 8,
             y: mousePosition.y - 8,
@@ -61,7 +61,7 @@ export default function AboutSection() {
     const text = "I am a driven Software Engineering student at NUST, specializing in crafting dynamic and responsive web experiences. With a solid foundation in web development, I am now passionately expanding my skills into the fascinating realm of Artificial Intelligence. I thrive on solving complex problems and am dedicated to building applications that are not only functional but also intuitive and user-centric.";
     const words = text.split(" ");
 
-    const containerVariants = {
+    const containerVariants : Variants  = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -69,7 +69,7 @@ export default function AboutSection() {
         },
     };
 
-    const wordVariants = {
+    const wordVariants : Variants = {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0 },
     };
