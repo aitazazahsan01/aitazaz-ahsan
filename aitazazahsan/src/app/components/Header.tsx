@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 
@@ -11,7 +11,7 @@ const navLinks = ["About", "Experience", "Skills", "Services", "Projects", "Test
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuVariants = {
+  const menuVariants: Variants = {
     hidden: { opacity: 0, x: '100%' },
     visible: { opacity: 1, x: 0, transition: { duration: 0.3, ease: 'easeInOut' } }
   };
