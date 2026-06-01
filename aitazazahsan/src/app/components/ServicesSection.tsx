@@ -1,40 +1,40 @@
 // app/components/ServicesSection.tsx
 "use client";
 
-import { motion , Variants} from 'framer-motion';
-import { LayoutGrid, Bot, Store, Code, PenTool, Briefcase } from 'lucide-react';
+import { motion, Variants } from 'framer-motion';
+import { Globe, Bot, Brain, MessageSquareCode, Workflow, DatabaseZap } from 'lucide-react';
 
 // Services data based on your skills
 const services = [
     {
-        icon: <LayoutGrid size={32} className="text-purple-400" />,
-        title: "Web Development",
-        description: "Custom websites and dynamic web applications built with modern, scalable technologies like React and Next.js."
+        icon: <Globe size={32} className="text-blue-400" />,
+        title: "Full-Stack Web Development",
+        description: "Building scalable, high-performance web applications and responsive interfaces using the MERN stack and Next.js."
     },
     {
-        icon: <PenTool size={32} className="text-purple-400" />,
-        title: "UI/UX Design",
-        description: "Beautiful and intuitive user interfaces that convert visitors to customers, designed with a focus on user experience."
+        icon: <Bot size={32} className="text-green-400" />,
+        title: "Agentic AI Solutions",
+        description: "Developing autonomous AI agents and multi-agent systems to handle complex, multi-step tasks and streamline business operations."
     },
     {
-        icon: <Bot size={32} className="text-purple-400" />,
-        title: "AI Integration",
-        description: "Conversational AI and chatbot solutions tailored to automate tasks and enhance user engagement for your business."
+        icon: <Brain size={32} className="text-purple-400" />,
+        title: "Machine & Deep Learning",
+        description: "Designing and training custom neural networks (CNNs, RNNs, LSTMs) for predictive analytics, computer vision, and data insights."
     },
     {
-        icon: <Store size={32} className="text-purple-400" />,
-        title: "E-Commerce",
-        description: "Complete online stores with secure payment integration, inventory management, and a seamless shopping experience."
+        icon: <MessageSquareCode size={32} className="text-teal-400" />,
+        title: "LLM & RAG Integrations",
+        description: "Enhancing applications with Retrieval-Augmented Generation (RAG) and customized large language models for smart, context-aware interactions."
     },
     {
-        icon: <Code size={32} className="text-purple-400" />,
-        title: "API Development",
-        description: "Robust and scalable RESTful APIs to power your web and mobile applications, built with Node.js and Express."
+        icon: <Workflow size={32} className="text-orange-400" />,
+        title: "AI Workflow Automation",
+        description: "Automating repetitive processes and building seamless deployment pipelines using intelligent automation tools like n8n."
     },
     {
-        icon: <Briefcase size={32} className="text-purple-400" />,
-        title: "Technical Consulting",
-        description: "Expert technical consulting and code reviews to optimize your existing projects for performance and scalability."
+        icon: <DatabaseZap size={32} className="text-yellow-400" />,
+        title: "API & Backend Systems",
+        description: "Creating robust REST APIs, securing backend infrastructure, and seamlessly integrating third-party AI models into your existing ecosystem."
     }
 ];
 
