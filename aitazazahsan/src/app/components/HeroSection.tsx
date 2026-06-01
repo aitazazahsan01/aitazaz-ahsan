@@ -42,7 +42,7 @@ export default function HeroSection() {
         animate="visible"
       >
         <motion.h1
-          className="text-6xl md:text-8xl font-black tracking-tighter"
+          className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter"
           style={{ fontFamily: "'Poppins', sans-serif" }}
           variants={nameVariants}
         >
