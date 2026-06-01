@@ -198,7 +198,7 @@ export default function SkillsSection() {
     const [activeTab, setActiveTab] = useState(tabs[0]);
 
     return (
-        <div className="w-full h-full flex flex-col items-center justify-center p-4">
+        <section id="skills" className="w-full min-h-screen flex flex-col items-center justify-center p-4 py-24">
             <motion.h2 
                 className="text-4xl md:text-5xl font-bold mb-12 text-center" 
                 style={{ fontFamily: "'Poppins', sans-serif" }}

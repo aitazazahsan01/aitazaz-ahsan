@@ -158,7 +158,7 @@ export default function ExperienceSection() {
     const currentPanel = panels[index];
 
     return (
-        <div ref={ref} className="w-full h-full flex flex-col items-center justify-center p-4 relative overflow-hidden">
+        <section id="experience" ref={ref} className="w-full min-h-screen flex flex-col items-center justify-center p-4 py-24 relative overflow-hidden">
             {/* Animated Grid Background */}
             <div className="absolute inset-0 z-0 opacity-50" style={{
                 backgroundImage: `
