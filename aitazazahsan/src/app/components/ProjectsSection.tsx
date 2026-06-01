@@ -8,6 +8,41 @@ import Image from 'next/image';
 // Your project data
 const projects = [
     {
+        title: "Park Intel - Smart Parking",
+        description: "An AI-based smart parking system with real-time analytics. Deployed on Vercel.",
+        tech: ["Next.js", "AI", "Tailwind CSS"],
+        link: "https://github.com/aitazazahsan01/ParkIntel---Smart-Parking",
+        image: "/parkintel.png"
+    },
+    {
+        title: "DevCon NUST Portal",
+        description: "Contributor to the website of DevCon NUST, a flagship event of MCS NUST.",
+        tech: ["React", "Next.js", "Tailwind CSS"],
+        link: "https://github.com/aitazazahsan01/mcs-devcon-portal",
+        image: "/devcon.png"
+    },
+    {
+        title: "AI Crowd Behavior Analysis",
+        description: "A CNN & LSTM-based system utilizing drone and CCTV footage for real-time crowd behavior analysis.",
+        tech: ["Python", "CNN", "LSTM", "Deep Learning"],
+        link: "https://github.com/aitazazahsan01/CrowdBehaviourAnalysis",
+        image: "/crowd-behavior.png"
+    },
+    {
+        title: "Financial Archive System",
+        description: "A comprehensive financial archiving system developed under the supervision of Institute Instructors and Commandant.",
+        tech: ["Full Stack", "Database", "Security"],
+        link: "#",
+        image: "/financial-archive.png"
+    },
+    {
+        title: "ML & Deep Learning Labs",
+        description: "A comprehensive collection of Machine Learning and Deep Learning laboratory tasks and experiments.",
+        tech: ["Python", "Machine Learning", "Deep Learning"],
+        link: "https://github.com/aitazazahsan01/CS405_Deep-_Learning_Course",
+        image: "/ml-dl-labs.png"
+    },
+    {
         title: "Kaawish Website",
         description: "A full-stack web platform designed to connect and empower communities.",
         tech: ["React", "Node.js", "MongoDB"],
@@ -109,15 +144,17 @@ export default function ProjectsSection() {
                             <div className="flex flex-wrap gap-2 mb-4">
                                 {project.tech.map(t => <span key={t} className="text-xs bg-purple-900/50 text-purple-300 px-2 py-1 rounded-full">{t}</span>)}
                             </div>
-                            <a
-                                href={project.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="mt-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:scale-105 transform transition-transform duration-300"
-                            >
-                                <Github size={20}/>
-                                View Project
-                            </a>
+                            {project.link !== "#" && (
+                                <a
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:scale-105 transform transition-transform duration-300"
+                                >
+                                    <Github size={20}/>
+                                    View Project
+                                </a>
+                            )}
                         </div>
                     </motion.div>
                 ))}
